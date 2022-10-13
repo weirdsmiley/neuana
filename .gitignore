@@ -32,3 +32,5 @@
 *.app
 
 /build
+*.vim
+/Notes.md

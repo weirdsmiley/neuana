@@ -16,9 +16,9 @@ void test_scalar() {
   double true_output = 1.517999;
   function<double(double)> f = mysqrt;
   auto e = new analysis::Error<double, double>(input, f);
-  auto ae = e->absolute_error(true_input);
-  cout << "Absolute error: " << ae << endl;
-  auto re = e->relative_error(true_output);
+  // auto ae = e->absolute_error(true_input);
+  // cout << "Absolute error: " << ae << endl;
+  // auto re = e->relative_error(true_output);
   // cout << result << endl;
   // cout << *e << endl;
 }
@@ -38,7 +38,7 @@ void test_vector() {
   function<vec_d(vec_d)> f = mysqrtv<vec_d>;
 
   auto e = new analysis::Error<vec_d, vec_d>(input, f);
-  auto result = e->absolute_error(true_input);
+  // auto result = e->absolute_error(true_input);
   // cout << *e << endl;
 }
 
@@ -64,7 +64,7 @@ void test_matrix() {
   function<mat_d(mat_d)> f = mysqrtm<mat_d>;
 
   auto e = new analysis::Error<mat_d, mat_d>(input, f);
-  auto result = e->absolute_error(true_input);
+  // auto result = e->absolute_error(true_input);
 }
 
 void test_flattening() {
